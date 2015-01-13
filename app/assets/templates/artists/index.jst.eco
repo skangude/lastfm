@@ -1,0 +1,12 @@
+<form id='search_artist'>
+  <div style="width:100%; line-height:34px; margin-bottom: 10px; ">  
+    <div style='float:right; width:20%; display:inline;' >
+	  <button style="width:100%; height:100%;" class="btn-primary" type="submit">Search</button>
+    </div>
+    <input type="text" name='artist_name' id='search_artist_name' style='width:80%' placeholder="Artist search...">
+  </div>
+</form>
+
+
+<ul class='list-group' id='artists-list'>
+</ul>
