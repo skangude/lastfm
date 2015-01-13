@@ -1,0 +1,10 @@
+<h3 style='text-align:center'>Top Albums by <%= @artist %> </h3>
+
+<ul id='#albums-list'>
+  <% for album in @albums.models: %>
+    <li>
+      <img src= <%= album.get('image')[1]['#text'] %> />
+      <span class='album_name' style='width:50%;text-align:center;vertical-align:middle'><%= album.get('name') %></span>
+    </li>
+  <% end %>
+</ul>

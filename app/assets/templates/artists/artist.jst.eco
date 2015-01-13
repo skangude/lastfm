@@ -1,1 +1,1 @@
-<img src= <%= @artist.get('image')[1]['#text'] %> /><span class='artist_name' style='width:50%;text-align:center;vertical-align:middle'><%= @artist.get('name') %></div>
+<img src= <%= @artist.get('image')[1]['#text'] %> /><span class='artist_name' style='width:50%;text-align:center;vertical-align:middle'><%= @artist.get('name') %></span>

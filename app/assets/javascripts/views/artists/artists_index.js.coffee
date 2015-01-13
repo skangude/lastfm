@@ -8,12 +8,14 @@ class Lastfm.Views.ArtistsIndex extends Backbone.View
   
   initialize: ->
     @listenTo(@collection,'sync',@render_results)
+    #@listenTo(@collection,'reset',@render)
   
   render: ->
     $(@el).html(@template())
     this
 
   render_results: ->
+    #@render()
     $('#artists-list').html('')
     @collection.each(@showArtist)
     this
@@ -26,11 +28,13 @@ class Lastfm.Views.ArtistsIndex extends Backbone.View
       return
     @collection.searchTerm = text
     @collection.fetch()
+    Backbone.history.navigate("/search/#{text}",{trigger:false})
   
   showArtist: (artist)=>
     view = new Lastfm.Views.Artist(model: artist)
     @$('#artists-list').append(view.render().el)
   
   showAlbums: (event)->
-    artist = $(event.target).find('span.artist_name').text()
-    Backbone.history.navigate('',true)
+    artist = $(event.target).closest('li').find('span.artist_name').text()
+    console.log(artist)
+    Backbone.history.navigate("/artist/#{artist}",{trigger:true})
