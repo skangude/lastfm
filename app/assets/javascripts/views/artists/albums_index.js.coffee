@@ -10,6 +10,5 @@ class Lastfm.Views.AlbumsIndex extends Backbone.View
     @collection.fetch()
   
   render: ->
-    console.log('render trigd')
     $(@el).html(@template(artist:@artist,albums:@collection))
     this

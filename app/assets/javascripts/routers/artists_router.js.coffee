@@ -21,3 +21,4 @@ class Lastfm.Routers.Artists extends Backbone.Router
     @artists.fetch()
     view = new Lastfm.Views.ArtistsIndex(collection:@artists)
     $('#container').html(view.render().el)
+    $('#search_artist_name').val(name)
