@@ -7,7 +7,7 @@ Uses the last.fm API, and allows a user to:
 2. Displays a list of artists which match the search, with an image for each artist
 3. Allows a user to click a displayed artist to see a list of their albums (including an image for each album).
 
-Browser pushState is used to have non-hashed real links. App is not properly Restful though as JS code needs to run in the browser to display the correct results. Should 'feel' Restful, for in browser usage. Tested in Chrome Version 39.0.2171.95m and 
+Browser pushState is used to have non-hashed real links. App is not properly Restful though as JS code needs to run in the browser to display the correct results. Should 'feel' Restful, for in browser usage. Tested in Chrome Version 39.0.2171.95m and Firefox 31.
 
 Takes shortcuts in favor of quick implementation. Needs re-factoring before extensions of functionality - especially a separate view for an album would be best if any events or clicks on them are to cause specific behaviors.
 
